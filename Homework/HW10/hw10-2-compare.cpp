@@ -39,3 +39,32 @@
 
 */
 
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    
+    char word[ 100 ] ;
+    int i = 0 ;
+    bool ans = true ;
+    do {
+        printf ( "Enter 1 charater :\n" ) ;
+        scanf ( " %c", &word[ i ] ) ;
+        
+        if ( word[ i ] == 'Y' || word[ i ] == 'y' ) {
+            ans = false ;
+        }
+    
+        i++ ;
+        
+    } while ( ans ) ;
+
+    int count = strlen( word ) ;
+    printf ( "\nString =" ) ;
+    for ( int i = 0 ; i < count - 1 ; i++ ) {
+        printf ( " %c", word[ i ] ) ; 
+    }
+    
+    
+    return 0 ;
+} // end main
